@@ -9,13 +9,17 @@ var express     = require("express"),
     Campground  = require("./models/campground"),
     Comment     = require("./models/comment"),
     User        = require("./models/user"),
-    seedDB      = require("./seeds")
+    seedDB      = require("./seeds");
     
 //requiring routes
 var commentRoutes    = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
- 
+
+ //require moment
+app.locals.moment = require('moment');
+
+// connect to  database
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
 mongoose.connect(url);
 
