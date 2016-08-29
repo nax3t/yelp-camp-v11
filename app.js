@@ -49,6 +49,12 @@ app.use(function(req, res, next){
    next();
 });
 
+//pass in path to view
+app.use(function(req, res, next) {
+  res.locals.current_path = req.path;
+  next();
+});
+
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
