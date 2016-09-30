@@ -18,8 +18,7 @@ router.post("/register", function(req, res){
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function(err, user){
         if(err){
-            req.flash("error", err.message);
-            return res.render("register");
+            return res.render("register", {"error": err.message});
         }
         passport.authenticate("local")(req, res, function(){
            req.flash("success", "Welcome to YelpCamp " + user.username);

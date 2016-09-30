@@ -33,3 +33,7 @@ body {
 .landing-text a {
 	color: #fff;
 }
+
+.vertical-center-col {
+  margin-top: 30vh;
+}
