@@ -3,12 +3,16 @@
 <head>
 	<title>YelpCamp</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="/stylesheets/landing.css">
 	<% if(current_path === "/login" || current_path === "/register") { %>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
 	<% } %>
 </head>
 <body>
+	<div id="landing-header">
+		<h1>Welcome to YelpCamp!</h1>
+		<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
+	</div>
 	<ul class="cb-slideshow">
 	  <li></li>
 	  <li></li>
@@ -16,14 +20,6 @@
 	  <li></li>
 	  <li></li>
 	</ul>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center landing-text vertical-center-col">
-				<h1>Welcome to YelpCamp!</h1>
-				<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
-			</div>
-		</div>
-	</div>
 	<!-- jQuery CDN -->
 	<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<!-- Latest compiled and minified Bootstrap JavaScript -->
